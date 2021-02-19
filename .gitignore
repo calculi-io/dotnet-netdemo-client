@@ -1,0 +1,8 @@
+packages
+bin
+obj
+.vs
+netdemo-client.zip
+TestResults
+coverage.xml
+Cobertura.xml
