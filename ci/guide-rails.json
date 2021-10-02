@@ -104,7 +104,6 @@
 			{
 				"name": "Integration",
 				"segment_type": "integration",
-				"persistent": true,
 				"run_after": [
 					"Build"
 				],
@@ -265,7 +264,21 @@
 				"post_deployment_actions": {
 					"loadbalancer": {}
 				},
-				"deployment_target": 1
+				"deployment_target": 1,
+				"releases": [
+					{
+						"name": "consul",
+						"version": "latest"
+					},
+					{
+						"name": "bosh-dns-windows",
+						"version": "latest"
+					},
+					{
+						"name": "netdemo-server",
+						"version": "latest"
+					}
+				]
 			}
 		],
 		"exit_actions": {
@@ -311,21 +324,7 @@
 			"init": {},
 			"stop": {},
 			"name": ""
-		},
-		"releases": [
-			{
-				"name": "bosh-dns-windows",
-				"version": "latest"
-			},
-			{
-				"name": "netdemo-server",
-				"version": "latest"
-			},
-			{
-				"name": "consul",
-				"version": "latest"
-			}
-		]
+		}
 	},
 	"organization": {
 		"orgname": "Onboarding-Demo"
