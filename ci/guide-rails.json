@@ -60,18 +60,7 @@
 					}
 				],
 				"post_deployment_actions": {
-					"instances": null,
-					"loadbalanced": false,
-					"loadbalancer": {
-						"TargetGroupName": "",
-						"TargetGroupPort": 0,
-						"TargetGroupProtocol": "",
-						"TargetType": "",
-						"VPCID": "",
-						"HealthCheckEnabled": false,
-						"HealthCheckPort": "",
-						"UnhealthyThresholdCount": 0
-					}
+					"loadbalancer": {}
 				},
 				"cache_info": {},
 				"tasks": [
@@ -118,14 +107,6 @@
 				"persistent": true,
 				"run_after": [
 					"Build"
-				],
-				"job_steps": [
-					{
-						"name": "Install Client",
-						"definition": "Client Installation Procedure",
-						"command": ".\\ci\\install.ps1",
-						"properties": null
-					}
 				],
 				"exit_actions": {
 					"default": {
@@ -274,19 +255,21 @@
 					}
 				],
 				"post_deployment_actions": {
-					"instances": null,
-					"loadbalanced": false,
-					"loadbalancer": {
-						"TargetGroupName": "",
-						"TargetGroupPort": 0,
-						"TargetGroupProtocol": "",
-						"TargetType": "",
-						"VPCID": "",
-						"HealthCheckEnabled": false,
-						"HealthCheckPort": "",
-						"UnhealthyThresholdCount": 0
-					}
+					"loadbalancer": {}
 				},
+				"tasks": [
+					{
+						"name": "netdemo-client",
+						"steps": [
+							{
+								"name": "Install Client",
+								"definition": "Client Installation Procedure",
+								"command": ".\\ci\\install.ps1",
+								"properties": null
+							}
+						]
+					}
+				],
 				"deployment_target": 1
 			}
 		],
