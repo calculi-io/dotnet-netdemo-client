@@ -372,7 +372,7 @@
 			{
 				"name": "pipeline",
 				"image": {
-					"name": "registry.guide-rails.io/guide-rails/pipeline-image-cli",
+					"name": "docker-registry.query.consul:443/pipeline-image-cli",
 					"version": "latest-SDP-1089",
 					"location": "docker-registry.service.consul:443"
 				}
