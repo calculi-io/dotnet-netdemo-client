@@ -96,12 +96,6 @@
 								"definition": "Pacakge as zip file",
 								"command": ".\\package.ps1",
 								"properties": null
-							},
-							{
-								"name": "wrong command",
-								"definition": "wrong command",
-								"command": "wrong command",
-								"properties": null
 							}
 						]
 					}
